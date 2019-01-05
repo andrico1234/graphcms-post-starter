@@ -4,13 +4,13 @@ import React from 'react'
 
 const Header = () => (
   <StyledHeader>
-    <StyledHeading>
+    <Heading>
       <StyledLink
         to="/"
       >
         Home
       </StyledLink>
-    </StyledHeading>
+    </Heading>
   </StyledHeader>
 )
 
@@ -23,7 +23,7 @@ const StyledHeader = styled.div`
   width: 100%;
 `
 
-const StyledHeading = styled.h2`
+const Heading = styled.h2`
   margin: 0;
   padding: 8px 16px;
 `

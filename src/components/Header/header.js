@@ -17,8 +17,9 @@ const Header = () => (
 export default Header
 
 const StyledHeader = styled.div`
-  background: black;
-  color: white;
+  background: white;
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
+  color: #4e825a;
   display: flex;
   width: 100%;
 `
@@ -29,6 +30,6 @@ const Heading = styled.h2`
 `
 
 const StyledLink = styled(Link)`
-  color: white;
+  color: #4e825a;
   text-decoration: none;
 `

@@ -1,11 +1,15 @@
-import React from 'react';
+import React from 'react'
 
-import SplitButton from '../SplitButton/splitButton';
+import CardList from '../CardList/cardList'
+import SplitButton from '../SplitButton/splitButton'
 
 const EventListing = () => {
   return (
-    <SplitButton />
+    <>
+      <SplitButton />
+      <CardList />
+    </>
   )
 }
 
-export default EventListing;
+export default EventListing

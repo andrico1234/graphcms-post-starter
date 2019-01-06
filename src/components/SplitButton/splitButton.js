@@ -45,6 +45,7 @@ const SplitButtonDefaults = styled.button`
   background-color: ${props => props.isActive ? '#e9e9e9' : 'white'}
   border: none;
   box-shadow: ${props => props.isActive ? 'inset 0px 1px 6px 1px rgba(0,0,0,0.51)' : '0px 1px 2px 0px rgba(0,0,0,0.5)'}; 
+  cursor: pointer;
   height: 48px;
   font-size: 24px;
   text-transform: capitalize;

@@ -18,7 +18,7 @@ export default Header
 
 const StyledHeader = styled.div`
   background: white;
-  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.3);
   color: #4e825a;
   display: flex;
   width: 100%;

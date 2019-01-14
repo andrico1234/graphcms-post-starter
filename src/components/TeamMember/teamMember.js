@@ -1,13 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const TeamMember = ({ profilePic }) => {
+const TeamMember = ({ data }) => {
+  const { name, gardenPartyHistory, profilePic, role } = data
+
   return (
     <MemberContent>
       <ContentWrapper>
         <Image src={profilePic} />
         <Description>
-          <p>Hey there</p>
+          <h3>{name}</h3>
+          <p>{role}</p>
+          <p>Been part of the team for {gardenPartyHistory}</p>
         </Description>
       </ContentWrapper>
     </MemberContent>
@@ -17,7 +21,7 @@ const TeamMember = ({ profilePic }) => {
 export default TeamMember
 
 const MemberContent = styled.div`
-  text-align: center;
+  margin: 0 auto;
   width: 350px;
 `
 
@@ -30,15 +34,28 @@ const ContentWrapper = styled.div`
 const Image = styled.img`
   transition: all 0.2s linear;
   width: 200px;
+  z-index: 1;
 
   &:hover {
     transform: scale(1.1);
     opacity: 0.3;
+
+    & + div {
+      z-index: 1;
+    }
   }
 `
 
 const Description = styled.div`
-  position: absolute;
+  color: white;
   left: 0;
+  padding-left: 8px;
+  pointer-events: none;
+  position: absolute;
   top: 0;
+  z-index: -1;
+
+  $:hover {
+    z-index: 1;
+  }
 `

@@ -13,7 +13,50 @@ import TeamMember from '../components/TeamMember/teamMember'
 import Layout from '../components/Layout/layout'
 import SEO from '../components/Seo/seo'
 
-const imagesArray = [David, Eva, Jacks, Jaime, Kirstie, Paul, Sonja]
+const data = [
+  {
+    name: 'David',
+    profilePic: David,
+    role: 'Organiser',
+    gardenPartyHistory: '12 Months',
+  },
+  {
+    name: 'Eva',
+    role: 'Project manager',
+    profilePic: Eva,
+    gardenPartyHistory: '12 Months',
+  },
+  {
+    name: 'Jacks',
+    profilePic: Jacks,
+    role: 'Co-founder',
+    gardenPartyHistory: '12 Months',
+  },
+  {
+    name: 'Jaime',
+    profilePic: Jaime,
+    role: 'MC',
+    gardenPartyHistory: '12 Months',
+  },
+  {
+    name: 'Kirstie',
+    profilePic: Kirstie,
+    role: 'Project Manager',
+    gardenPartyHistory: '12 Months',
+  },
+  {
+    name: 'Paul',
+    profilePic: Paul,
+    role: 'Social media manager',
+    gardenPartyHistory: '12 Months',
+  },
+  {
+    name: 'Sonja',
+    profilePic: Sonja,
+    role: 'Co-founder',
+    gardenPartyHistory: '12 Months',
+  },
+]
 
 const TeamPage = () => {
   return (
@@ -21,8 +64,8 @@ const TeamPage = () => {
       <SEO title="Meet the team" />
       <StyledHeader>Meet the team</StyledHeader>
       <MemberContainer>
-        {imagesArray.map(image => (
-          <TeamMember profilePic={image} />
+        {data.map(person => (
+          <TeamMember data={person} />
         ))}
       </MemberContainer>
     </Layout>
@@ -37,7 +80,8 @@ const StyledHeader = styled.h1`
 `
 
 const MemberContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
   justify-content: space-around;
 `
+

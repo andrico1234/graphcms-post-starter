@@ -1,33 +1,25 @@
 import React from 'react'
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-class SplitButton extends React.Component {
-  state = {
-    activeItem: 'right',
-  }
-
-  handleClick = buttonSide => {
-    this.setState({
-      activeItem: buttonSide,
-    })
-  }
-
-  render() {
-    const { activeItem } = this.state
-
-    return (
-      <StyledSplitButton>
-        <SplitButtonWrapper>
-          <LeftButton isActive={activeItem === 'left'} onClick={() => this.handleClick('left')}>
-            past
-          </LeftButton>
-          <RightButton isActive={activeItem === 'right'} onClick={() => this.handleClick('right')}>
-            future
-          </RightButton>
-        </SplitButtonWrapper>
-      </StyledSplitButton>
-    )
-  }
+const SplitButton = ({ activeItem, handleClick }) => {
+  return (
+    <StyledSplitButton>
+      <SplitButtonWrapper>
+        <LeftButton
+          isActive={activeItem === 'left'}
+          onClick={() => handleClick('left')}
+        >
+          past
+        </LeftButton>
+        <RightButton
+          isActive={activeItem === 'right'}
+          onClick={() => handleClick('right')}
+        >
+          future
+        </RightButton>
+      </SplitButtonWrapper>
+    </StyledSplitButton>
+  )
 }
 
 export default SplitButton
@@ -42,9 +34,12 @@ const SplitButtonWrapper = styled.div`
 `
 
 const SplitButtonDefaults = styled.button`
-  background-color: ${props => props.isActive ? '#e9e9e9' : 'white'}
+  background-color: ${props => (props.isActive ? '#e9e9e9' : 'white')}
   border: none;
-  box-shadow: ${props => props.isActive ? 'inset 0px 1px 6px 1px rgba(0,0,0,0.51)' : '0px 1px 2px 0px rgba(0,0,0,0.5)'}; 
+  box-shadow: ${props =>
+    props.isActive
+      ? 'inset 0px 1px 6px 1px rgba(0,0,0,0.51)'
+      : '0px 1px 2px 0px rgba(0,0,0,0.5)'}; 
   cursor: pointer;
   height: 48px;
   font-size: 24px;
@@ -58,12 +53,12 @@ const SplitButtonDefaults = styled.button`
 
 const LeftButton = styled(SplitButtonDefaults)`
   border-bottom-left-radius: 30px;
-  border-right: ${props => props.isActive ? '1px solid grey' : 'none'};
+  border-right: ${props => (props.isActive ? '1px solid grey' : 'none')};
   border-top-left-radius: 30px;
 `
 
 const RightButton = styled(SplitButtonDefaults)`
   border-bottom-right-radius: 30px;
-  border-left: ${props => props.isActive ? '1px solid grey' : 'none'};
+  border-left: ${props => (props.isActive ? '1px solid grey' : 'none')};
   border-top-right-radius: 30px;
 `

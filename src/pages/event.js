@@ -4,13 +4,11 @@ import styled from 'styled-components'
 import BandImage from '../images/band-image.jpg'
 import Button from '../components/Button/button'
 import Layout from '../components/Layout/layout'
-import SEO from '../components/Seo/seo'
 import realFakeText from '../components/RealFakeText/realFakeText'
 
 const Event = () => {
   return (
     <Layout>
-      <SEO title="event" tags={['music', 'event', 'paulette']} />
       <Background />
       <EventDescription>
         <h1>Paulette</h1>

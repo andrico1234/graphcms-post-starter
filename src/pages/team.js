@@ -11,7 +11,6 @@ import {
 } from '../images/profile-pictures'
 import TeamMember from '../components/TeamMember/teamMember'
 import Layout from '../components/Layout/layout'
-import SEO from '../components/Seo/seo'
 
 const data = [
   {
@@ -61,7 +60,6 @@ const data = [
 const TeamPage = () => {
   return (
     <Layout>
-      <SEO title="Meet the team" />
       <StyledHeader>Meet the team</StyledHeader>
       <MemberContainer>
         {data.map(person => (

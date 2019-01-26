@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import Card from './Card/card';
 
 const CardList = ({ data }) => {
-  console.log('data', data);
   return (
     <StyledCardList>
       {data.map(({ node }) => (

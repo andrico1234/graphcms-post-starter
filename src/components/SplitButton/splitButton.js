@@ -6,14 +6,14 @@ const SplitButton = ({ activeItem, handleClick }) => {
     <StyledSplitButton>
       <SplitButtonWrapper>
         <LeftButton
-          isActive={activeItem === 'left'}
-          onClick={() => handleClick('left')}
+          isActive={activeItem === 'past'}
+          onClick={() => handleClick('past')}
         >
           past
         </LeftButton>
         <RightButton
-          isActive={activeItem === 'right'}
-          onClick={() => handleClick('right')}
+          isActive={activeItem === 'future'}
+          onClick={() => handleClick('future')}
         >
           future
         </RightButton>

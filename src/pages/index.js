@@ -6,11 +6,29 @@ import Heading from '../components/Heading/heading';
 import EventListing from '../components/EventListing/eventListing'
 import GardenImage from '../images/garden.jpg'
 
+const data = [
+  {
+    node: {
+      id: 123
+    }
+  },
+  {
+    node: {
+      id: 234,
+    }
+  },
+  {
+    node: {
+      id: 325,
+    },
+  },
+];
+
 const IndexPage = () => (
   <Layout>
     <Image src={GardenImage} alt="Photo by Scott Webb on Unsplash"/>
     <Heading title="Garden Party" />
-    <EventListing />
+    <EventListing data={data} />
   </Layout>
 )
 

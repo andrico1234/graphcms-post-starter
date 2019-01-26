@@ -3,11 +3,12 @@ import styled from 'styled-components'
 
 import Card from './Card/card';
 
-const CardList = ({ cardData = [1, 2, 3, 4] }) => {
+const CardList = ({ data }) => {
+  console.log('data', data);
   return (
     <StyledCardList>
-      {cardData.map(item => (
-        <Card key={item} data={item} />
+      {data.map(({ node }) => (
+        <Card key={node.id} data={node} />
       ))}
     </StyledCardList>
   )
